@@ -1,6 +1,6 @@
 == README
 
-Project 2 - Finance Tracker from Ruby on Rails Developer's Course
+Project 2 - Finance Tracker from Ruby on Rails Developer's Course 
 
 
 
