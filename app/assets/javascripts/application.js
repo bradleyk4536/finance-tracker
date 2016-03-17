@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+//USED TO HIDE SPINNER CONTROL
+var hide_spinner = function () {
+	"use strict";
+	$('#spinner').hide();
+};
+
+//USED TO DISPLAY SPINNER CONTROL
+var show_spinner = function () {
+	"use strict";
+	$('#spinner').show();
+};

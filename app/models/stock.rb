@@ -1,9 +1,10 @@
 class Stock < ActiveRecord::Base
+	#look for stock in stocks table
 
 	def self.find_by_ticker(ticker_symbol)
 		where(ticker: ticker_symbol).first
 	end
-
+	#used if stock is not in table. Yahoo API gem stock_quote is used
 	def self.new_from_lookup(ticker_symbol)
 		looked_up_stock = StockQuote::Stock.quote(ticker_symbol)
 		return nil unless looked_up_stock.name
