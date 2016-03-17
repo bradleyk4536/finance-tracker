@@ -1,4 +1,8 @@
 class Stock < ActiveRecord::Base
+
+	has_many :user_stocks
+	has_many :users, through: :user_stocks
+
 	#look for stock in stocks table
 
 	def self.find_by_ticker(ticker_symbol)
