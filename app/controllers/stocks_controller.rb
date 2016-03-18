@@ -6,7 +6,7 @@ class StocksController < ApplicationController
 			@stock ||= Stock.new_from_lookup(params[:stock])
 		end
 		if @stock
-			#render json: @stock - used to see if search function is working
+			#render json: @stock
 			render partial: 'lookup'
 		else
 			render status: :not_found, nothing: true
