@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+// turbolinks
 //= require_tree .
 
 //USED TO HIDE SPINNER CONTROL
