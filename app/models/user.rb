@@ -6,7 +6,14 @@ class User < ActiveRecord::Base
 
 	has_many :user_stocks
 	has_many :stocks, through: :user_stocks
+	has_many :friendships
+	has_many :friends, through: :friendships
 
+#	construct full name for devise views
+	def full_name
+		return "#{first_name} #{last_name}".strip if (first_name || last_name)
+		"Anonymous"
+	end
 	#	only add stock to user stock table if user has not reached their limit of 10 and stock has not already
 #	been added
 	def can_add_stock?(ticker_symbol)

@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
 	def my_portfolio
 #		initiate user_stock variable many to many association
 
@@ -6,5 +7,9 @@ class UsersController < ApplicationController
 
 #		restrict action based on the current user
 		@user = current_user
+	end
+
+	def my_friends
+
 	end
 end
